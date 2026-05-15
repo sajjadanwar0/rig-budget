@@ -9,6 +9,7 @@ repository = "https://github.com/sajjadanwar0/rig-budget"
 [dependencies]
 token-budgets = { path = "../token-budgets" }
 thiserror = "2.0.18"
+anyhow = "1.0.102"
 
 [dev-dependencies]
 tokio = { version = "1", features = ["full"] }
