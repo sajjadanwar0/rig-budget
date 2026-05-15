@@ -1,0 +1,14 @@
+[package]
+name = "rig-budget"
+version = "0.1.0"
+edition = "2024"
+description = "Affine-typed Budget threading for the rig LLM framework"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/sajjadanwar0/rig-budget"
+
+[dependencies]
+token-budgets = { path = "../token-budgets" }
+thiserror = "2.0.18"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full"] }
