@@ -96,8 +96,8 @@ For other models, construct directly:
 
 ```rust
 let custom = ProviderPricing {
-input_nc_per_token: 750,
-output_nc_per_token: 2000,
+    input_nc_per_token: 750,
+    output_nc_per_token: 2000,
 };
 ```
 
