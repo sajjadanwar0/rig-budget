@@ -30,16 +30,16 @@ let prompt = "What is the capital of France?";
 let max_output_tokens: u32 = 256;
 
 let (returned_budget, response) = with_budget(
-    budget,
-    pricing,
-    &ByteLength,
-    prompt,
-    max_output_tokens,
-    || async {
-        // Your provider call here — rig, reqwest, whatever.
-        // Must return (response, input_tokens, output_tokens).
-        Ok::<(String, u64, u64), String>(("Paris.".to_string(), 8, 2))
-    },
+budget,
+pricing,
+&ByteLength,
+prompt,
+max_output_tokens,
+|| async {
+// Your provider call here — rig, reqwest, whatever.
+// Must return (response, input_tokens, output_tokens).
+Ok::<(String, u64, u64), String>(("Paris.".to_string(), 8, 2))
+},
 ).await?;
 
 println!("Response: {}", response);
@@ -96,8 +96,8 @@ For other models, construct directly:
 
 ```rust
 let custom = ProviderPricing {
-    input_nc_per_token: 750,
-    output_nc_per_token: 2000,
+input_nc_per_token: 750,
+output_nc_per_token: 2000,
 };
 ```
 
